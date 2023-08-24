@@ -1,6 +1,28 @@
 import java.util.ArrayList;
+import java.util.Arrays; 
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class main {
+
+    //Método que retorna quantas ocorrências de um elemento estão na lista
+    public static int nOcorrencias (ArrayList<Integer> list, int target){
+        int count = 0; 
+        for (int e:numeros){
+            if (target=e){
+            count++;
+            }
+        }
+        return count; 
+    }
+    
+    //Método que retorna uma lista de elementos repetidos de l
+    public static List<Integer> listRepeat (List<Integer> list){
+        Set<Integer> elements = new HashSet<Integer>();
+        return list.stream().filter(n -> !elements.add(n)).collect(Collectors.toList());
+    
+    }
+
 public static void main(String Args[]){
 ArrayList<Integer> listWithRepeats = new ArrayList<>();
 listWithRepeats.add(1);
